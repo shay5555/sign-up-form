@@ -1,6 +1,9 @@
 :root {
     --left-padding: 40px;
+    --right-size-width: 70%;
+    --container-height: 750px;
     font-family: sans-serif, 'Courier New', Courier, monospace;
+    background-color: #f3f3f3   ;
 }
 
 body {
@@ -20,6 +23,46 @@ input {
     display: block;
 }
 
+#sign-up-container {
+    display: flex;
+    max-height: 750px;
+    max-width: 55vw;
+    min-width: 1300px;
+    box-shadow: 0px 10px 10px -5px gray;
+    overflow: hidden;
+}
+
+#left-side {
+    flex: 1 1 auto;
+    max-width: calc(100% - calc(var(--right-size-width)));
+}
+
+#left-side .images {
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+#left-side img {    
+    width: 700px;
+}
+
+#left-side #logo-img {
+    position: absolute;
+    opacity: 45%;
+    top: 10%;
+    width: 100%;
+    height: auto;
+}
+
+#right-side {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    background-color: rgb(231, 231, 231);
+    max-width: var(--right-size-width);
+}
+
 #right-side .pre-form-text {
     font-weight: bold;
     font-size: x-large;
@@ -27,12 +70,6 @@ input {
     padding-left: var(--left-padding);
 }
 
-.sign-up-container {
-    display: flex;
-    border: 1px solid black;
-    height: 750px;
-    min-width: 55vw;
-}
 
 #form-top legend {
     padding-top: 15px;
@@ -51,25 +88,13 @@ input {
 
 #form-top    {
     box-shadow: 0px 10px 10px -5px gray;
-    background-color: #FEFEFE !important;
+    background-color: #f8f8f8 !important;
 }
 
 #form-bottom {
     padding-top: 20px;
 }
 
-#left-side {
-    flex: 1 1 auto;
-    border: 1px solid black;
-}
-
-#right-side {
-    display: flex;
-    justify-content: center;
-    flex-direction: column; 
-    background-color: rgb(236, 236, 236);
-    max-width: 65%;
-}
 
 #input-fields label {
     font-size: small;
