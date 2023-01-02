@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.sign-up-container {
+    display: flex;
+    border: 1px solid black;
+    height: 700px;
+    min-width: 55vw;
+}
+
+label, 
+input {
+    display: block;
+}
+
+form {
+    background-color: #FEFEFE;
+}
+
+form legend {
+    margin-top: 15px;
+}
+
+#left-side {
+    flex: 1 1 auto;
+    border: 1px solid black;
+}
+
+#right-side {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    background-color: rgb(214, 214, 214);
+    max-width: 65%;
+}
+
+#right-side > * {
+    padding-left: 20px;
+}
+
+#right-side .pre-form-text {
+    font-weight: bold;
+    font-size: larger;
+    max-width: 75%;
+}
+
+#input-fields {
+    padding: 15px 0;
+}
+
+#right-side p, 
+#right-side form {
+    margin: 15px 0 25px;
+}
+
+#input-fields label {
+    font-size: small;
+    padding-bottom: 1px;
+}
+
+#input-fields > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 8px;
+}
