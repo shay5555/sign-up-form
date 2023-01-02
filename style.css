@@ -2,6 +2,7 @@
     --left-padding: 40px;
     --right-size-width: 70%;
     --container-height: 750px;
+    --font-size: 16px;
     font-family: sans-serif, 'Courier New', Courier, monospace;
     background-color: #f3f3f3   ;
 }
@@ -18,14 +19,9 @@ a {
     text-decoration: none;
 }
 
-label, 
-input {
-    display: block;
-}
-
 #sign-up-container {
     display: flex;
-    max-height: 750px;
+    height: var(--container-height);
     max-width: 55vw;
     min-width: 1300px;
     box-shadow: 0px 10px 10px -5px gray;
@@ -34,7 +30,8 @@ input {
 
 #left-side {
     flex: 1 1 auto;
-    max-width: calc(100% - calc(var(--right-size-width)));
+    position: relative;
+    width: calc(100% - calc(var(--right-size-width)));
 }
 
 #left-side .images {
@@ -53,6 +50,24 @@ input {
     top: 10%;
     width: 100%;
     height: auto;
+}
+
+#left-side .photo-credit {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    bottom: 0.5%;
+    color: white;
+}
+
+#left-side a {
+    color: wheat;
+}
+
+label, 
+input {
+    display: block;
 }
 
 #right-side {
