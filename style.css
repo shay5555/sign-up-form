@@ -65,11 +65,6 @@ a {
     color: wheat;
 }
 
-label, 
-input {
-    display: block;
-}
-
 #right-side {
     display: flex;
     justify-content: center;
@@ -110,17 +105,62 @@ input {
     padding-top: 20px;
 }
 
+#input-fields label, 
+#input-fields input {
+    display: block;
+}
 
 #input-fields label {
     font-size: small;
     padding-bottom: 1px;
 }
 
+#input-fields input {
+    padding: 2px 0;
+    width: 250px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+#input-fields input.error {
+    border-color: #900 !important;
+    box-shadow: 0 0 4px 0 #900;
+    background-color: rgb(255, 199, 199);
+}
+
+#input-fields input.valid {
+    background-color: white;
+}
+
+
+#input-fields span {
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: royalblue;
+    box-shadow: 0 0 4px 0 royalblue;
+}
+
 #input-fields > div {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    margin-bottom: 8px;
+}
+
+.first-form-line > div, 
+.second-form-line > div, 
+.third-form-line > div {
+    padding-bottom: 10px;
+}
+
+.first-name-field, 
+.email-field, 
+.password-field {
+    padding-right: 30px;
 }
 
 #form-bottom button {
@@ -135,3 +175,11 @@ input {
 #form-bottom a {
     color: rgb(70, 133, 45);
 }
+
+.error {
+    width: 100%;
+    padding: 0 2px;
+    font-size: 13px;
+    background-color: rgb(255, 199, 199);
+}
+
